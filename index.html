@@ -7,10 +7,28 @@
 
 <body> 
 	<h1>Massage Chair</h1>
-	<form action='https://homeassistant.local/api/webhook/-8iQ1Bo9UWqgiKX-lwVdy7EZX' method='post'>
+	<form action='' method=''>
 	    <input type='text' id='memberName' name='memberName'>
             <input type='integer' id='chairTime' name='chairTime'>
-	    <input type='submit'>
+	    <input type='submit' text='Start' onclick="sendMessage()">
 	</form>
 </body>
+
+<script>
+    function sendMessage() {
+        var serverRequest;
+        
+        if(window.XMLHttpRequest) {
+            serverRequest = new XMLHttpserverRequest();
+            
+	        serverRequest.onreadystatechange = function() {
+                if (serverRequest.readyState == 4 & serverRequest.status == 200) {
+                    document.getElementById("memberName").innerHTML = serverRequest.memberName; 
+                    document.getElementById("chairTime").innerHTML = serverRequest.chairTime; 
+		        } 
+	        } 
+        }
+    }
+  </script>
+
 </html>
