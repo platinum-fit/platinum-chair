@@ -28,7 +28,7 @@
 		        } 
 	        } 
 		
-		serverRequest.open("POST", "http://homeassistant.local:8123/api/-8iQ1Bo9UWqgiKX0lwVdy7EZX", true);
+		serverRequest.open("GET", "http://homeassistant.local:8123/api/-8iQ1Bo9UWqgiKX0lwVdy7EZX?name=" + document.getElementById("memberName").innerHTML + "&time=" + document.getElementById("chairTime").innerHTML , true);
 		serverRequest.send();
         }
     }
