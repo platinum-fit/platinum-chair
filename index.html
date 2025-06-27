@@ -27,6 +27,8 @@
                     document.getElementById("chairTime").innerHTML = serverRequest.chairTime; 
 		        } 
 	        } 
+		serverRequest.open("POST", "http://homeassistant.local:8123/api/-8iQ1Bo9UWqgiKX0lwVdy7EZX", true);
+		serverRequest.send();
         }
     }
   </script>
